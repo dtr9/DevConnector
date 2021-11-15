@@ -1,0 +1,6 @@
+{
+    "mongoURI": "mongodb+srv://white_walker:lakshya2707@socdev-azibx.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "mysecrettoken",
+    "githubClientId": "0f201d207c57ee23a607",
+    "githubSecret": "506b8032453f97cebd1d05dff1764c07aa047812"
+}
