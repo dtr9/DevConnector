@@ -6,6 +6,7 @@ const gravatar = require('gravatar');
 const jwt =require('jsonwebtoken');
 const config = require('config');
 const User = require('../../models/User.js');
+require('dotenv').config();
 
 // @route         POST api/users
 // @description   Register User
@@ -63,7 +64,7 @@ router.post('/',[
             }
             jwt.sign(
                 payload,
-                config.get('jwtSecret'),
+                process.env.JWT_SECRET,
                 {expiresIn: 3600},
                 (err, token) =>{ 
                     if(err) throw err;

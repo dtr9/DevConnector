@@ -2,9 +2,12 @@ const mongoose = require('mongoose');
 
 // mongoose.set('useNewUrlParser', true);
 // mongoose.set('useUnifiedTopology', true);
+require('dotenv').config(); // Load variables from .env file
+const db = process.env.MONGODB_URI;
 
-const config = require('config');
-const db = config.get('mongoURI');
+
+//const config = require('config');
+//const db = config.get('mongoURI');
 
 const connectDB = async() => {
     try{
